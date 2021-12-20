@@ -11,9 +11,27 @@ align-content: center;
 
 const Title= styled.h1``;
 const Description= styled.p``;
-const InputContainer= styled.div``;
-const Button= styled.button``;
-const Input = styled.input``;
+
+const InputContainer= styled.div`
+ width: 50%;
+ height: 40px;
+ background-color: white;
+ display: flex;
+ justify-content: space-between;
+ border:1px solid lightgray;
+`;
+const Button= styled.button`
+flex:1;
+border:none;
+background-color:teal;
+color: white`
+
+;
+const Input = styled.input`
+border: none;
+flex:8;
+padding-left: 20px;`
+;
 
 
 const Newsletter = () => {
