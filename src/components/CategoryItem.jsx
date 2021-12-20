@@ -7,17 +7,17 @@ import styled from "styled-components"
 const Container =styled.div`
 flex:1;
 margin:3px;
-height:70vh`;
+height:70vh;`;
 
 
 const Info =styled.div`
-postion:absolute;
+position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
 display:flex;
-flex-direction: column
+flex-direction: column;
 align-items:center;
 justify-content:center;
 `
@@ -38,7 +38,7 @@ padding:10px;
 background-color: white;
 color:grey;
 cursor:pointer;
-font-weight:600;`
+font-weight:600;`;
 
 const CategoryItem = ({item}) => {
     return (

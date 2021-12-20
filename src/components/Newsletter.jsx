@@ -1,22 +1,28 @@
+
 import { Send } from '@material-ui/icons'
 import styled from 'styled-components'
 
+const Container = styled.div`
+height:60vh;
+background-color: #fcf5f5;
+display:flex;
+align-content: center;
+`;
 
-const Container = styled.div``
-const Title= styled.h1``
-const Description= styled.p``
-const InputContainer= styled.div``
-const Button= styled.button``
-const Input = styled.input``
+const Title= styled.h1``;
+const Description= styled.p``;
+const InputContainer= styled.div``;
+const Button= styled.button``;
+const Input = styled.input``;
 
 
-function Newsletter() {
+const Newsletter = () => {
     return (
         <Container>
-            <Title></Title>
-            <Description></Description>
+            <Title>Newsletter</Title>
+            <Description>Get timely updates from your favourite products</Description>
             <InputContainer>
-              <Input />
+              <Input placeholder="Your email"/>
               <Button>
                   <Send />
               </Button>
@@ -26,3 +32,11 @@ function Newsletter() {
 }
 
 export default Newsletter
+
+
+
+
+
+
+
+

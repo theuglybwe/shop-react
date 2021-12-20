@@ -27,7 +27,7 @@ const Language = styled.span`
 `
 const SearchContainer= styled.div`
  border:0.5px soild lightgrey;
- diplay:flex;
+ display:flex;
  align-items: center;
  margin-left: 25px;
  padding:5px;
@@ -49,8 +49,8 @@ const Right=styled.div`
 `
 
 const MenuItem = styled.div`
-font-size: 14px
-cusor: pointer`;
+font-size: 14px;
+cursor: pointer;`;
 
 
 const Navbar = () => {

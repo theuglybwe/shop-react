@@ -13,7 +13,7 @@ opacity:0;
  display:flex;
  align-items:center;
  justify-content: center;
- transansition:all 0.5s ease;
+ transition:all 0.5s ease;
  cursor:pointer;
 
 `
@@ -23,13 +23,13 @@ flex:1;
 margin:5px;
 min-width:280px;
 height:350px;
-display:flex
+display:flex;
 align-items:center;
 justify-content:center;
 background-color: #f5fbfd;
 &:hover ${Info}{
     opacity:1;
-}`
+}`;
 
 
 const Circle = styled.div`
@@ -52,7 +52,7 @@ display:flex;
 align-items:center;
 justify-content: center;
 margin:10px;
-transansition:all 0.5s ease;
+transition:all 0.5s ease;
 &:hover{
     background-color: #e9f5f5;
     transform:scale(1.1);
