@@ -1,5 +1,6 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons"
 import styled from "styled-components"
+import {sliderItems} from "../data"
 
 const Container = styled.div`
   width: 100%;
@@ -30,13 +31,14 @@ const Arrow = styled.div`
 const Wrapper= styled.div`
  height:100%;
  display:flex;
- transform:translate();
+ transform:translate(${props=>props.slideIndex* -100}vw);
 `
 const Slide = styled.div`
 width: 100vw;
 height 100vh;
 dipalay: flex;
 align-items:center;
+background-color:#${(props)=> props.bg};
 `;
 const ImgContainer = styled.div`
 height:100%
@@ -65,8 +67,15 @@ background-color:transparent;
 cursor:pointer`
 
 const Slider = () => {
+    const[slideIndex,setSlideIndex] = useState(0);
     const handleClick =(direction) =>{
 
+        if(direction==="left"){
+            setSlideIndex(slideIndex>0 ? slideIndex -1 :2);
+        }
+        else{
+            setSlideIndex(slideIndex<2 ? slideIndex +1 :0);
+        }
     }
     return (
         <Container>
@@ -76,27 +85,19 @@ const Slider = () => {
             <Arrow direction="right" onClick={()=>handleClick("right")}>
                 <ArrowRightOutlined />
             </Arrow>
-            <Wrapper>
-            <Slide>
+            <Wrapper slideIndex={slideIndex}>
+          {sliderItems.map((item)=>(
+            <Slide key={item.id}>
              <ImgContainer>
-                <Image src=""/>
+                <Image src={item.img}/>
             </ImgContainer>
                 <InfoContainer>
-                    <Title>SUMMER SALE</Title>
-                    <Desc>DON'T COMPROMISE ON STYLE!</Desc>
+                    <Title>{item.title}</Title>
+                    <Desc>{item.desc}</Desc>
                     <Button>BUY NOW</Button>
                 </InfoContainer>
             </Slide>
-            <Slide>
-             <ImgContainer>
-                <Image src=""/>
-            </ImgContainer>
-                <InfoContainer>
-                    <Title>WINTER SALE</Title>
-                    <Desc>DON'T COMPROMISE ON STYLE!</Desc>
-                    <Button>BUY NOW</Button>
-                </InfoContainer>
-            </Slide>
+          ))}
             </Wrapper>
         </Container>
     )

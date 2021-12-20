@@ -24,4 +24,31 @@ export const silderItems =[
         title:"AUTUMN COLLECTION",
         desc:"DON'T COMPROMISE ON STYLE!"
     }
+];
+
+export const Categories=[
+    {
+        id:1,
+        img:"",
+        title:"Hats & Accessories"
+    },
+    {
+        id:2,
+        img:"",
+        title:"Tops"
+    },
+    {
+        id:3,
+        img:"",
+        title:"Bottoms"
+    }
+];
+
+export const popularProducts =[
+  {
+    id:1,
+    img:""
+   }
+
+
 ]
