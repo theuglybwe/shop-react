@@ -24,7 +24,7 @@ const Button= styled.button`
 flex:1;
 border:none;
 background-color:teal;
-color: white`
+color: white;`
 
 ;
 const Input = styled.input`
