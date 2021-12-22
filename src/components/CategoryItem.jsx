@@ -1,6 +1,6 @@
 import { TitleOutlined } from "@material-ui/icons"
 import styled from "styled-components"
-
+import { mobile } from '../responsive';
 
 
 
@@ -25,7 +25,10 @@ justify-content:center;
 const Image=styled.img`
 width:100%;
 height:100%;
-object-fit:cover;`;
+object-fit:cover;
+${mobile({height:"30vh"})}
+
+`;
 
 
 const Title =styled.h1`

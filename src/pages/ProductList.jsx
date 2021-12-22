@@ -14,7 +14,8 @@ display:flex;
 justify-content: space-between;
 `;
 const Filter = styled.div`
-margin: 20px;`;
+margin: 20px;
+${mobile({margin:"opx 20px",display:"flex", flexDirection:"column"})}`;
 
 const FilterText = styled.span`
  font-size:20px;
