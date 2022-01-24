@@ -23,7 +23,7 @@ router.put("/:id",verifyTokenandAdmin, async (req,res)=>{
        const updatedProduct = await Product.findByIdAndUpdate(req.params.id,{
            $set: req.body,
        },{new:true});
-       res.status(200).json(updatedUser);
+       res.status(200).json(updatedProduct);
    }catch(err){
        res.status(500).json(err);
    }
@@ -36,7 +36,7 @@ router.delete("/:id",verifyTokenandAdmin, async (req,res)=>{
     try{
 
         await Product.findByIdAndDelete(req.params.id)
-        res.statys(200).json("Product has been deleted...");
+        res.status(200).json("Product has been deleted...");
 
     }
     catch(err){
@@ -48,10 +48,9 @@ router.delete("/:id",verifyTokenandAdmin, async (req,res)=>{
 router.get("/find/:id", async (req,res)=>{
     try{
 
-        await Product.findById(req.params.id)
-        const {password,...others} = user._doc;
+       const product = await Product.findById(req.params.id)
 
-        res.status(200).json(others);
+        res.status(200).json(product);
 
     }
     catch(err){
