@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import { mobile } from "../responsive";
+import { useLocation } from "react-router-dom"
 
 const Container = styled.div``;
 
@@ -116,6 +117,19 @@ const Button = styled.button`
 `;
 
 const Product = () => {
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const [product,setProduct] = useState({});
+
+  useEffect(() => {
+   const getProduct = async ()=>{
+     try{
+
+     }catch(err){
+       
+     }
+   }
+  }, [id]);
   return (
     <Container>
       <Navbar />
@@ -137,9 +151,9 @@ const Product = () => {
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="darkblue" />
-              <FilterColor color="gray" />
+              <FilterColor color="Black" />
+              <FilterColor color="Darkblue" />
+              <FilterColor color="Gray" />
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
