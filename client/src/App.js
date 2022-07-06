@@ -2,8 +2,8 @@ import Product from "./pages/Product";
 import Home from "./pages/Home";
 import { render } from "react-dom";
 import {
-  BrowserRouter,
-  Routes,
+  Switch,
+  BrowserRouter as Router,
   Route,
   Redirect
 } from "react-router-dom";
@@ -30,10 +30,10 @@ const App = () => {
           <Cart/>
         </Route>
         <Route exact path="/login">
-          {user ? <Redirect to="/"/> : <Login/>}
+          {user ? <Redirect path="/"/> : <Login/>}
         </Route>
         <Route exact path="/register">
-        {user ? <Redirect to="/"/> : <Register/>}
+        {user ? <Redirect path="/"/> : <Register/>}
         </Route>
       </Switch>
     </Router>

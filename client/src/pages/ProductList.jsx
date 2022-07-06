@@ -6,6 +6,10 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
 
+import {useState, useEffect} from 'react';
+
+import {useLocation} from 'react-router-dom';
+
 const Container = styled.div``;
 
 const Title = styled.h1`

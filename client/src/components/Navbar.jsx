@@ -78,7 +78,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>UNDYING.</Logo>
+          <Logo>SHOP BUY</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
